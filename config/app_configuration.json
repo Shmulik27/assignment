@@ -1,0 +1,8 @@
+{
+  "inputFileName": "spins_input.json",
+  "outputFileName": "output.csv",
+  "numWorkers": 4,
+  "linesPerFile": 2500,
+  "linesChannelSize": 100,
+  "resultsChannelSize": 100
+}
