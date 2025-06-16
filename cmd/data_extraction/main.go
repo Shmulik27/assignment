@@ -8,8 +8,15 @@ import (
 )
 
 func main() {
-
-	logger.InitLogger()
+	// Initialize logger with default configuration
+	logConfig := logger.LogConfig{
+		Level:      "info",
+		Format:     "text",
+		OutputPath: "",
+	}
+	if err := logger.InitLogger(logConfig); err != nil {
+		panic(err)
+	}
 
 	// Load configuration
 	config, err := config.LoadConfig("config/app_configuration.json")
